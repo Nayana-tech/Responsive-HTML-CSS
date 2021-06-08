@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'ubuntu', sans-serif;
+    font-size: 1.125rem;
+}
+
+header{
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 2em 0;
+    margin-bottom: 3em;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    padding: 1em 0;
+}
+
+.img-full{
+   max-width: 300px;
+   width: 100%; 
+   object-fit: cover;
+   margin-bottom: 1em;
+}
+.header_wrapper{
+    width: 90%;
+    max-width: 900;
+    display: flex;
+   margin: 0 auto;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_text{
+    width:45%;
+    text-align: start;
+}
+
+h1, h2, h3{
+    font-family: 'lora', serif;
+    font-weight: 400;
+    color: #143774;
+    
+   
+}
+
+
+.left_text h1, .left_text p.subtitle{
+    text-align: center;
+}
+
+h3{
+    color: #1792d2;
+    padding: 1em 0;
+}
+h2{
+    padding: 1em 0;
+}
+
+ h1{
+    font-size: 2rem;
+   
+}
+
+.left_text p.subtitle{
+    color: #1792D2;
+    font-size: .75rem;
+    font-weight: 700;
+    margin:0;
+    
+}
+
+.navigation{
+    width:45%;
+}
+.navigation ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    
+ 
+  
+}
+
+.navigation ul li{
+    margin:.5em 0;
+    
+}
+
+.navigation ul li a{
+    color: #707070;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    padding: .25em 0;
+   
+}
+nav ul li a:hover, nav ul li a:focus{
+    color:#1792d2;
+    
+}
+
+.current_page{
+    border-bottom: 1px solid #707070;
+}
+
+.current_page:hover{
+    color: #707070;
+}
+/* header ends */
+
+.article-title{
+    font-size: 1.5rem;
+}
+
+.article-body{
+    padding: 1em 0;
+}
+.article-read-more, .article-info{
+    font-size: .875rem;
+}
+
+
+.article-read-more{
+    color:#1792d2;
+    text-decoration: none;
+    font-weight: 700;
+    
+
+}
+
+.article-read-more:hover,
+.article-read-more:focus{
+    color:#143774;
+    text-decoration: underline;
+}
+
+.article-info{
+    margin: 2em 0;
+    color:#707070;
+}
+
+
+
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin:0 auto;
+}
+
+
+main, aside{
+    margin:0 auto;
+    width:100%;
+}
+
+/* article */
+
+.article-featured{
+    border-bottom: 1px solid #707070;
+    padding-bottom:1em ;
+    margin-bottom:2em ;
+}
+
+.article-recent{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.article-recent-main{
+    order:2;
+}
+
+.article-recent-secondary{
+    order:1;
+}
+
+.article-image{
+    width:100%;
+    min-height: 250px;
+    object-fit: cover;
+    /* object-position:left ; */
+
+}
+
+
+.widget-recent-post{
+    display: flex;
+    flex-direction: column;
+    border-bottom:1px solid #707070;
+    padding-bottom: 1em;
+}
+
+.widget-recent-post:last-child{
+    border: 0;
+    margin:0;
+}
+
+.widget-image{
+    order:-1;
+    margin: 0 auto;
+}
+
+
+footer{
+    background:#143774;
+    color:white;
+    text-align: center;
+    padding: 3em 0;
+}
+
+
+
+@media (min-width: 675px){
+    .header_wrapper, .navigation ul, .container-flex{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left_text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+
+    main{
+        width: 70%;
+    }
+    aside{
+        width: 20%;
+        min-width: 200px;
+        margin-left: 1em;
+    }
+
+    .article-recent{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    .article-recent-main{
+        width:67%;
+
+    }
+
+    .article-recent-secondary{
+        width:30% ;
+    }
+
+    .article-featured{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .article-image{
+        order:-2;
+    }
+
+    .article-info{
+       order: -1; 
+    }
+/* widgets */
+
+    .sidebar{
+        margin-top: 1em;
+    }
+    .sidebar-widget{
+        border: 20px solid #efefef;
+        margin-bottom: 2em;
+        padding: 1em;
+    }
+
+    .widget-title,
+    .widget-recent-post-title{
+        font-size: 1rem;
+    }
+
+    .widget-title{
+        font-family: 'ubuntu', sans-serif;
+        font-weight:700;
+    }
+
+    .widget-recent-post-title{
+        color: #143774;
+    }
+
+
+}
+
+@media (min-width: 500px){
+    .article-recent-main{
+        margin-top: 2.5em;
+    }
+
+    .article-info{
+        text-align: right;
+    }
+}
+
+
